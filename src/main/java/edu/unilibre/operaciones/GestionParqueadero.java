@@ -1,5 +1,11 @@
 package edu.unilibre.operaciones;
 
+import edu.unilibre.datos.Bicicleta;
+import edu.unilibre.datos.Propietario;
+import edu.unilibre.datos.Parqueadero;
+import java.time.LocalDate;
+
+
 public class GestionParqueadero {
     private Parqueadero parqueadero;
     public GestionParqueadero (){
