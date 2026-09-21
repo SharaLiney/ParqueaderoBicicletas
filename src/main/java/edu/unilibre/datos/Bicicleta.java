@@ -47,4 +47,19 @@ public class Bicicleta {
         this.pagado=pagado;
         this.valorMinuto=valorMinuto;
     }
+
+    public void registrarSalida(){
+        this.horaSalida = LocalDateTime.now();
+    }
+    public double calcularValor(){
+        if (horaSalida == null){
+            return 0;
+        }
+        long segundos = Duration.between(horaIngreso, horaSalida).getSeconds();
+        long minutos = (segundos + 59)/60;
+        return minutos * valorMinuto;
+    }
+    public void marcarPagado(){
+        this.pagado=true;
+    }
 }
