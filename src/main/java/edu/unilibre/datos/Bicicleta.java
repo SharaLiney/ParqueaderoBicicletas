@@ -1,8 +1,10 @@
 package edu.unilibre.datos;
+import java.time.Duration;
 import java.time.LocalDateTime;
 
 public class Bicicleta {
     private int cupo;
+    private Propietario propietario;
     private LocalDateTime horaIngreso;
     private LocalDateTime horaSalida;
     private boolean pagado;
@@ -10,6 +12,9 @@ public class Bicicleta {
 
     public int obtenerCupo() {
         return cupo;
+    }
+    public Propietario obtenerPropietario() {
+        return propietario;
     }
     public LocalDateTime obtenerHoraIngreso() {
         return horaIngreso;
@@ -27,6 +32,9 @@ public class Bicicleta {
     public void modificarCupo(int cupo) {
         this.cupo = cupo;
     }
+    public void modificarPropietario(Propietario propietario) {
+        this.propietario = propietario;
+    }
     public void modificarHoraIngreso(LocalDateTime horaIngreso) {
         this.horaIngreso = horaIngreso;
     }
@@ -40,12 +48,9 @@ public class Bicicleta {
         this.valorMinuto = valorMinuto;
     }
 
-    public Bicicleta (int cupo, LocalDateTime horaIngreso, LocalDateTime horaSalida, boolean pagado, double valorMinuto){
+    public Bicicleta (int cupo, Propietario propietario){
         this.cupo=cupo;
-        this.horaIngreso=horaIngreso;
-        this.horaSalida=horaSalida;
-        this.pagado=pagado;
-        this.valorMinuto=valorMinuto;
+        this.propietario=propietario;
     }
 
     public void registrarSalida(){
